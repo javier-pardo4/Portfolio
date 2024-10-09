@@ -1,0 +1,171 @@
+/* Reset para el body */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Contenedor de partículas */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Para mantener las partículas detrás del contenido */
+}
+
+/* Estilos para la sección principal */
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* Contenido del héroe */
+.hero-content {
+  margin-top: 150px;
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+  margin: 0 0 30px; /* Añade margen inferior */
+  color: #c29af4; /* Color morado */
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin: 20px 0 40px; /* Añade margen superior e inferior */
+  color: #ffffff;
+}
+
+/* Navbar */
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro y semitransparente */
+  width: 100%; /* Ocupar toda la barra superior */
+  position: fixed; /* Fijar la barra en la parte superior */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+/* Estilos para la lista de navegación */
+.navbar ul {
+  list-style: none; /* Quitar viñetas */
+  padding: 0; /* Quitar padding */
+  margin: 0; /* Quitar margen */
+  display: flex; /* Usar flexbox para distribución horizontal */
+  justify-content: flex-start; /* Alinear a la izquierda */
+}
+
+/* Estilos para cada elemento de la lista */
+.navbar ul li {
+  margin: 0 20px; /* Espaciado entre los elementos */
+}
+
+/* Estilos para los enlaces */
+.navbar ul li a {
+  color: #fefefe; /* Color del texto */
+  text-decoration: none; /* Quitar subrayado */
+  font-size: 1.2em; /* Tamaño de la fuente */
+  padding: 15px; /* Espaciado alrededor del texto */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto de hover en los enlaces */
+.navbar ul li a:hover {
+  color: #c29af4; /* Color morado al hacer hover */
+  transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+}
+
+
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 2em;
+  margin: 0 15px;
+}
+
+.social-icons a:hover {
+  color: #c29af4; /* Color morado al hacer hover */
+}
+
+/* Desde Uiverse.io por TISEPSE */
+.cv-button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #fefefe;
+  text-transform: uppercase;
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.cv-button::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 12px);
+  background-color: black;
+  transition: 0.3s ease-in-out;
+  transform: scaleY(1);
+}
+
+.cv-button:hover::before {
+  transform: scaleY(0);
+}
+
+.cv-button::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% - 12px);
+  background-color: black;
+  transition: 0.3s ease-in-out;
+  transform: scaleX(1);
+  transition-delay: 0.5s;
+}
+
+.cv-button:hover::after {
+  transform: scaleX(0);
+}
+
+.cv-button span {
+  position: relative;
+  z-index: 3;
+}
+
+/* Estilo para otros botones (opcional) */
+.buttons button {
+  background-color: none;
+  text-decoration: none;
+  background-color: black;
+  border: none;
+}
+
