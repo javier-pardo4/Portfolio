@@ -1,27 +1,40 @@
-<div id="particles-js"></div>
-<div class="hero-section">
-  <nav class="navbar">
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Sobre mí</a></li>
-      <li><a href="#">Educación</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </nav>
+<div class="container">
+  <!-- Inicio -->
+  <section class="hero" id="inicio">
+    <h1>{{ name }}</h1>
+    <p>{{ profession }}</p>
+    <p>{{ field }}</p>
+    <button class="btn" (click)="downloadCV()">Descargar CV</button>
+  </section>
 
-  <div class="hero-content">
-    <h1>JAVIER PARDO</h1>
-    <p>INGENIERIA INFORMATICA | TECNOLOGIA DE LA INFORMACION</p>
-    
-    <div class="buttons">
-      <a href="#" class="cv-button"><span>DOWNLOAD CV</span></a>
-    </div>    
+  <!-- Sobre mí -->
+  <section class="about" id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>{{ aboutMe }}</p>
+  </section>
 
-    <div class="social-icons">
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-      <a href="#"><i class="fa fa-github"></i></a>
+  <!-- Educación -->
+  <section class="education" id="educacion">
+    <h2>Educación</h2>
+    <div class="timeline">
+      <div *ngFor="let edu of education" class="timeline-event">
+        <h3>{{ edu.degree }}</h3>
+        <p>{{ edu.institution }} ({{ edu.year }})</p>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="contact" id="contacto">
+    <h2>Contacto</h2>
+    <p>Correo: {{ email }}</p>
+    <ul>
+      <li *ngFor="let social of socials">
+        <a [href]="social.link" target="_blank">{{ social.name }}</a>
+      </li>
+    </ul>
+    <button class="btn" (click)="downloadCV()">Descargar CV</button>
+  </section>
 </div>
 
 

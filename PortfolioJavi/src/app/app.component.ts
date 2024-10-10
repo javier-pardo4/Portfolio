@@ -1,59 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';  // Necesitas importar CommonModule en componentes standalone
-
-declare var particlesJS: any;
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  standalone: true,  // Marca el componente como standalone
-  imports: [CommonModule]  // Importa los módulos que necesites
+  standalone: true,
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  ngOnInit() {
-    particlesJS('particles-js', {
-      "particles": {
-        "number": {
-          "value": 100,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
-        "color": {
-          "value": "#ffffff"
-        },
-        "shape": {
-          "type": "circle",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
-          }
-        },
-        "opacity": {
-          "value": 0.5,
-          "random": true
-        },
-        "size": {
-          "value": 5,
-          "random": true
-        },
-        "line_linked": {
-          "enable": false
-        },
-        "move": {
-          "enable": true,
-          "speed": 6,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "attract": {
-            "enable": false
-          }
-        }
-      }
-    });
+export class AppComponent {
+  name = 'Juan Pérez';
+  profession = 'Ingeniero Informático';
+  field = 'Especializado en Tecnología de la Información';
+  aboutMe = 'Soy un apasionado de la tecnología, con experiencia en desarrollo de software, seguridad informática y administración de sistemas.';
+
+  education = [
+    { degree: 'Ingeniería Informática', institution: 'Universidad X', year: '2015-2020' },
+    { degree: 'Maestría en Tecnología de la Información', institution: 'Instituto Y', year: '2021-2023' }
+  ];
+
+  email = 'juanperez@example.com';
+
+  socials = [
+    { name: 'GitHub', link: 'https://github.com/juanperez' },
+    { name: 'LinkedIn', link: 'https://linkedin.com/in/juanperez' }
+  ];
+
+  downloadCV() {
+    window.open('assets/CV_JuanPerez.pdf', '_blank');
   }
 }
