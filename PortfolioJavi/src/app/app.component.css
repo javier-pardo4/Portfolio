@@ -57,7 +57,7 @@ body, html {
 /* Navbar */
 /* Estilos para la barra de navegación */
 .navbar {
-  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro y semitransparente */
+  background-color: white; /* Fondo oscuro y semitransparente */
   width: 100%; /* Ocupar toda la barra superior */
   position: fixed; /* Fijar la barra en la parte superior */
   top: 0;
@@ -81,7 +81,7 @@ body, html {
 
 /* Estilos para los enlaces */
 .navbar ul li a {
-  color: #fefefe; /* Color del texto */
+  color: black; /* Color del texto */
   text-decoration: none; /* Quitar subrayado */
   font-size: 1.2em; /* Tamaño de la fuente */
   padding: 15px; /* Espaciado alrededor del texto */
