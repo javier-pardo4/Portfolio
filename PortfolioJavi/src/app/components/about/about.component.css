@@ -1,14 +1,129 @@
 #about {
-    color: #0D0D0D;
-    padding: 2em;
-    text-align: center;
+  color: #0D0D0D;
+  padding: 2em;
+  text-align: center;
+}
+
+#about h3 {
+  color: #64ffda;
+  margin: 80px 0 50px 0;
+  font-size: 2rem; /* Tamaño más grande para "¡Hola, mi nombre es!" */
+  font-weight: normal;
+  font-family: "Roboto Mono", monospace; /* Reemplaza con la fuente correspondiente */
+  text-align: left;
+  position: relative;
+}
+
+#about h3::before {
+  content: '';
+  position: absolute;
+  left: -20px; /* Ajusta esta distancia según sea necesario */
+  top: 0;
+  bottom: 0;
+  width: 2px; /* Grosor de la línea */
+  background-color: #64ffda; /* Color de la línea */
+}
+
+#about p {
+  color: #d7def3;
+  text-align: left;
+  justify-content: center;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", "Monaco", monospace; /* Cambia la fuente a una de las fuentes proporcionadas */
+  font-size: 1.1rem; /* Tamaño de fuente más grande */
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.about-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.about-description {
+  max-width: 480px;
+  align-self: flex-end; /* Baja el texto */
+}
+
+.about-tech-container {
+  margin-top: 30px;
+  align-self: flex-start; /* Sube la tarjeta */
+}
+
+/* Card styles */
+.card {
+  width: 290px;
+  height: 300px;
+  background: #0539a8; /* Color de fondo de la tarjeta */
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  color: #0D0D0D; /* Color del texto */
+  border-radius: 15px;
+  box-shadow: -20px 20px 0px -5px #64ffda; /* Sombra de la tarjeta */
+  margin-top: 25px;	
+  margin-left: 80%; /* Mueve la tarjeta a la izquierda */
+}
+
+.title {
+  font-weight: 900;
+  font-size: 1.7em;
+  color: #64ffda; /* Color del título */
+  transition: color 0.3s ease-in-out;
+}
+
+.title:hover {
+  color: #51572c; /* Color del título al pasar el ratón por encima */
+}
+
+.tag__name {
+  display: inline-block;
+  color: #000000;
+  font-size: 1.1em;
+  background-color: #64ffda; /* Color de fondo de las etiquetas */
+  padding: 6px 23px 9px;
+  border-radius: 70em;
+  margin: 8px 6px 8px 0;
+  margin-left: 0px;
+  position: relative;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.tag__name::before, .tag__name::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0D0D0D; /* Color de los puntos */
+}
+
+.tag__name::before {
+  left: 7px;
+}
+
+.tag__name::after {
+  right: 7px;
+}
+
+.tag__name:hover {
+  transform: scale(1.1);
+  background-color: #ddff01;
+}
+
+@media (max-width: 500px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  #about h2 {
-    color: #2A3D66;
+
+  .about-tech-container {
+    width: 100%;
+    margin-top: 20px;
   }
-  
-  #about p {
-    color: #0D0D0D;
-  }
-  
+}
