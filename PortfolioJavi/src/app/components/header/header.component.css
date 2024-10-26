@@ -1,0 +1,180 @@
+.header {
+  height: 70px; /* Altura del encabezado */
+  position: fixed; /* Mantiene el encabezado fijo al hacer scroll */
+  top: 0; /* Asegura que el encabezado esté en la parte superior */
+  left: 0; /* Asegura que el encabezado esté en el margen izquierdo */
+  width: 100%; /* Usar 100vw para asegurarse de que ocupe todo el ancho */
+  z-index: 1; /* Por encima de otros elementos */
+  display: flex; /* Usa flexbox para la alineación horizontal */
+  align-items: center; /* Alinea verticalmente todos los elementos */
+  padding: 0 20px; /* Espaciado interno */
+  background-color: #0a192f; /* Color de fondo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Sombra para el encabezado */
+  transition: background-color 0.6s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.header__content {
+  display: flex; /* Usa flexbox para distribuir los elementos */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  align-items: center; /* Alinea verticalmente todos los elementos */
+  justify-content: space-between; /* Espacia los elementos a los extremos */
+}
+
+.header__logo-container {
+  display: flex; /* Asegura que el logo esté alineado horizontalmente */
+  align-items: center; /* Alinea verticalmente el logo */
+}
+
+.header__logo-img {
+  width: 45px; /* Tamaño de la imagen */
+  border-radius: 50%; /* Redondear la imagen */
+}
+
+.header__main {
+  display: flex; /* Usa flexbox para la navegación */
+  align-items: center; /* Alinea verticalmente los elementos de navegación */
+}
+
+.menu-ul {
+  display: flex; /* Muestra los elementos en línea */
+  list-style: none; /* Elimina puntos de la lista */
+  padding: 0; /* Elimina padding */
+  margin: 0; /* Elimina margin */
+  align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.header__link-wrapper {
+  margin: 0 15px; /* Espaciado entre enlaces */
+}
+
+.header__link {
+  color: #ccd6f6; /* Color del texto */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  text-decoration: none; /* Elimina subrayado */
+  font-weight: bold; /* Negrita */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.header__link:hover {
+  color: #64ffda; /* Cambia el color al pasar el mouse */
+}
+
+.cv-btn {
+  padding: 7px 15px;
+  background: #64ffda; /* Color del botón de CV */
+  color: #0a192f; /* Color del texto del botón */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar */
+  font-weight: bold; /* Negrita */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+.cv-btn:hover {
+  background-color: #52e0c4; /* Color de fondo al pasar el mouse */
+  color: #ffffff; /* Color del texto al pasar el mouse */
+}
+
+.menu-wrapper {
+  display: none; /* Oculta el menú hamburguesa en pantallas grandes */
+  cursor: pointer; /* Cambia el cursor al pasar */
+}
+
+.hamburger-menu {
+  width: 30px;
+  height: 3px;
+  background-color: #ccd6f6;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background-color: #ccd6f6;
+  position: absolute;
+  transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
+}
+
+.hamburger-menu::before {
+  top: -10px;
+}
+
+.hamburger-menu::after {
+  bottom: -10px;
+}
+
+.menu-wrapper.active .hamburger-menu {
+  background-color: transparent;
+}
+
+.menu-wrapper.active .hamburger-menu::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-wrapper.active .hamburger-menu::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+.menu-responsive {
+  display: none; /* Oculta el menú responsive por defecto */
+}
+
+@media (max-width: 827px) {
+  .menu-wrapper {
+    display: block; /* Muestra el menú hamburguesa en pantallas pequeñas */
+  }
+
+  .menu-ul {
+    display: none; /* Oculta el menú de navegación en pantallas pequeñas */
+  }
+
+  .menu-responsive {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background-color: #0a192f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+  }
+
+  .menu-responsive.active {
+    transform: translateX(0);
+  }
+
+  .menu-responsive nav ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .menu-responsive nav ol li {
+    margin: 20px 0;
+  }
+
+  .menu-responsive nav ol li a {
+    color: #ccd6f6;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+
+  .menu-responsive nav ol li a:hover {
+    color: #64ffda;
+  }
+}

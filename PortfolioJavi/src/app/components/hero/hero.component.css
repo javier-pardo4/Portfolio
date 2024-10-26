@@ -1,0 +1,68 @@
+.banner {
+  min-height: 100%;
+}
+
+.container {
+  display: table;
+  height: 100vh;
+}
+
+.section-box-banner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.section-box-banner .content {
+  margin-top: 98px; /* Ajusta según tus necesidades */
+}
+
+.section-box-banner h1 {
+  color: #64ffda; /* Color de título */
+  margin: 0 0 20px 3px;
+  font-size: 2rem; /* Tamaño más grande para "¡Hola, mi nombre es!" */
+  font-weight: normal;
+  font-family: "Roboto Mono", monospace; /* Reemplaza con la fuente correspondiente */
+}
+
+.section-box-banner h2 {
+  font-weight: 600;
+  font-size: 5.5rem; /* Tamaño más pequeño para el nombre */
+  line-height: 1.1;
+  margin: 0;
+  font-family: "Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue, Segoe UI, Arial, sans-serif"; /* Reemplaza con la fuente correspondiente */
+  background: linear-gradient(120deg, #50efb5, #8ff4ca, #7e57c2, #0087f2, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  color: #ccd6f6; /* Lightest Slate */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-box-banner h3 {
+  font-weight: 600;
+  font-size: 4rem; /* Tamaño más pequeño para el título */
+  line-height: 1.1;
+  margin: 0;
+  font-family: "Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue, Segoe UI, Arial, sans-serif"; /* Reemplaza con la fuente correspondiente */
+  background: linear-gradient(120deg, #50efb5, #8ff4ca, #7e57c2, #0087f2, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  color: #8892b0; /* Slate */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-box-banner .banner-description {
+  margin-bottom: 180px;
+}
+
+.section-box-banner p {
+  max-width: 100%;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", "Monaco", monospace; /* Cambia la fuente a una de las fuentes proporcionadas */
+  color: #ccd6f6; /* Color más claro */
+  opacity: 0.8; /* Hace que el texto se vea más claro */
+  font-size: 1.2rem; /* Tamaño de fuente */
+  line-height: 1.5; /* Altura de línea para mejor legibilidad */
+}
+
+.section-box-banner .div-btn-banner {
+  height: 43px; /* Ajusta según tus necesidades */
+}
