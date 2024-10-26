@@ -23,7 +23,7 @@ body {
 
 .container {
   max-width: 1800px; /* Ajusta el ancho máximo según tus necesidades */
-  margin: 0 35px; /* Centra el contenedor horizontalmente */
+  margin: 0 45px; /* Centra el contenedor horizontalmente */
   padding: 0 10px; /* Añade un poco de padding para que el contenido no toque los bordes */
 }
 
