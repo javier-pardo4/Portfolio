@@ -15,16 +15,7 @@ declare var particlesJS: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   standalone: true,
-  imports: [
-    CommonModule,
-    HeaderComponent,
-    HeroComponent,
-    AboutComponent,
-    ContactComponent,
-    ProjectsComponent,
-    FooterComponent,
-    CarouselModule // Añade CarouselModule a los imports
-  ]
+  imports: [CommonModule,HeaderComponent,HeroComponent,AboutComponent,ContactComponent,ProjectsComponent,FooterComponent,CarouselModule] // Añade CarouselModule a los imports]
 })
 export class AppComponent implements OnInit {
   title = 'PortfolioJavi';

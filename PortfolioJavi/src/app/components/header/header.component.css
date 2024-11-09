@@ -1,100 +1,107 @@
+/* Estilo general de la cabecera */
 .header {
-  height: 70px; /* Altura del encabezado */
-  position: fixed; /* Mantiene el encabezado fijo al hacer scroll */
-  top: 0; /* Asegura que el encabezado esté en la parte superior */
-  left: 0; /* Asegura que el encabezado esté en el margen izquierdo */
-  width: 100%; /* Usar 100vw para asegurarse de que ocupe todo el ancho */
-  z-index: 1; /* Por encima de otros elementos */
-  display: flex; /* Usa flexbox para la alineación horizontal */
-  align-items: center; /* Alinea verticalmente todos los elementos */
-  padding: 0 20px; /* Espaciado interno */
-  background-color: #0a192f; /* Color de fondo */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Sombra para el encabezado */
-  transition: background-color 0.6s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: #0a192f;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.6s ease, box-shadow 0.3s ease;
 }
 
 .header__content {
-  display: flex; /* Usa flexbox para distribuir los elementos */
-  width: 100%; /* Asegura que ocupe todo el ancho */
-  align-items: center; /* Alinea verticalmente todos los elementos */
-  justify-content: space-between; /* Espacia los elementos a los extremos */
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__logo-container {
-  display: flex; /* Asegura que el logo esté alineado horizontalmente */
-  align-items: center; /* Alinea verticalmente el logo */
+  display: flex;
+  align-items: center;
 }
 
 .header__logo-img {
-  width: 45px; /* Tamaño de la imagen */
-  border-radius: 50%; /* Redondear la imagen */
+  width: 45px;
+  border-radius: 50%;
 }
 
 .header__main {
-  display: flex; /* Usa flexbox para la navegación */
-  align-items: center; /* Alinea verticalmente los elementos de navegación */
+  display: flex;
+  align-items: center;
 }
 
 .menu-ul {
-  display: flex; /* Muestra los elementos en línea */
-  list-style: none; /* Elimina puntos de la lista */
-  padding: 0; /* Elimina padding */
-  margin: 0; /* Elimina margin */
-  align-items: center; /* Alinea los elementos verticalmente */
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
 }
 
 .header__link-wrapper {
-  margin: 0 15px; /* Espaciado entre enlaces */
+  margin: 0 15px;
 }
 
 .header__link {
-  color: #ccd6f6; /* Color del texto */
-  text-transform: uppercase; /* Texto en mayúsculas */
-  text-decoration: none; /* Elimina subrayado */
-  font-weight: bold; /* Negrita */
-  transition: color 0.3s ease; /* Transición suave para el color */
+  color: #ccd6f6;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .header__link:hover {
-  color: #64ffda; /* Cambia el color al pasar el mouse */
+  color: #64ffda;
 }
 
 .cv-btn {
   padding: 7px 15px;
-  background: #64ffda; /* Color del botón de CV */
-  color: #0a192f; /* Color del texto del botón */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor al pasar */
-  font-weight: bold; /* Negrita */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+  background: #64ffda;
+  color: #0a192f;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cv-btn:hover {
-  background-color: #52e0c4; /* Color de fondo al pasar el mouse */
-  color: #ffffff; /* Color del texto al pasar el mouse */
+  background-color: #52e0c4;
+  color: #ffffff;
 }
 
+/* Estilos del menú hamburguesa */
 .menu-wrapper {
-  display: none; /* Oculta el menú hamburguesa en pantallas grandes */
-  cursor: pointer; /* Cambia el cursor al pasar */
+  display: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 .hamburger-menu {
-  width: 30px;
+  width: 35px;
   height: 3px;
   background-color: #ccd6f6;
+  border-radius: 3px;
   position: relative;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .hamburger-menu::before,
 .hamburger-menu::after {
   content: '';
-  width: 30px;
+  width: 35px;
   height: 3px;
   background-color: #ccd6f6;
   position: absolute;
-  transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 3px;
 }
 
 .hamburger-menu::before {
@@ -105,6 +112,7 @@
   bottom: -10px;
 }
 
+/* Cambio de estado cuando se activa el menú hamburguesa */
 .menu-wrapper.active .hamburger-menu {
   background-color: transparent;
 }
@@ -119,62 +127,126 @@
   bottom: 0;
 }
 
+/* Menú responsive que aparece cuando el menú hamburguesa está activo */
 .menu-responsive {
-  display: none; /* Oculta el menú responsive por defecto */
+  display: none;
+  position: fixed;
+  top: 70px; /* El menú se muestra justo debajo del header */
+  right: 0;
+  background-color: #0a192f;
+  z-index: 10;
+  width: 50%; /* El menú ocupa la mitad de la pantalla */
+  height: 100vh;
+  transform: translateX(100%); /* El menú está fuera de la pantalla inicialmente */
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  box-shadow: 0 4px 6px rgba(0.4, 0, 0, 0.4); /* Sombra en los bordes del menú */
+  animation: slideInMenu 0.5s ease-out forwards; /* Animación para el contenedor del menú */
 }
 
-@media (max-width: 827px) {
+/* Mostrar el menú cuando se activa */
+.menu-responsive.active {
+  display: flex;
+  transform: translateX(0);
+}
+
+/* Animación de deslizamiento del contenedor del menú */
+@keyframes slideInMenu {
+  0% {
+    transform: translateX(100%); /* Empieza desde la derecha fuera de la pantalla */
+  }
+  100% {
+    transform: translateX(0); /* Se desliza hacia la izquierda hasta ocupar la mitad de la pantalla */
+  }
+}
+
+/* Estilo para las opciones del menú */
+.menu-responsive nav ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu-responsive nav ol li {
+  margin: 20px 0;
+  opacity: 0;
+  animation: slideInFromRight 0.3s ease-out forwards;
+}
+
+.menu-responsive nav ol li a {
+  color: #ccd6f6;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.menu-responsive nav ol li a:hover {
+  color: #64ffda;
+}
+
+.menu-responsive nav ol li a.cv-btn {
+  color: #000000; /* Cambia el color del texto a negro */
+}
+
+.menu-responsive nav ol li a.cv-btn:hover {
+  color: #000000; /* Cambia el color del texto a negro al hacer hover */
+}
+
+
+/* Animación de deslizamiento de las opciones del menú */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Estilos para pantallas grandes (cuando el menú hamburguesa no aparece) */
+@media (min-width: 828px) {
   .menu-wrapper {
-    display: block; /* Muestra el menú hamburguesa en pantallas pequeñas */
+    display: none; /* No mostrar el menú hamburguesa en pantallas grandes */
   }
 
   .menu-ul {
-    display: none; /* Oculta el menú de navegación en pantallas pequeñas */
+    display: flex; /* Mostrar el menú tradicional en pantallas grandes */
   }
 
   .menu-responsive {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
-    background-color: #0a192f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    transform: translateX(100%);
+    display: none; /* El menú hamburguesa no se muestra en pantallas grandes */
+  }
+}
+
+/* Estilos en pantallas pequeñas (cuando el menú hamburguesa sí aparece) */
+@media (max-width: 827px) {
+  .menu-wrapper {
+    display: block; /* Mostrar el icono del menú hamburguesa en pantallas pequeñas */
+  }
+
+  .menu-ul {
+    display: none; /* Ocultar el menú tradicional en pantallas pequeñas */
+  }
+
+  .menu-responsive {
+    display: none;
+    transform: translateX(100%); /* El menú está oculto fuera de la pantalla */
   }
 
   .menu-responsive.active {
-    transform: translateX(0);
-  }
-
-  .menu-responsive nav ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-
-  .menu-responsive nav ol li {
-    margin: 20px 0;
-  }
-
-  .menu-responsive nav ol li a {
-    color: #ccd6f6;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-
-  .menu-responsive nav ol li a:hover {
-    color: #64ffda;
+    display: flex;
+    transform: translateX(0); /* El menú se desliza hacia la izquierda */
   }
 }
+
+
+
+

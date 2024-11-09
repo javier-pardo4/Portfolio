@@ -148,3 +148,9 @@ ul {
 .example-2 .icon-content a[data-social="github"] ~ .tooltip {
   background-color: #24262a;
 }
+
+@media (max-width: 768px) {
+  footer, .footer-left-bar, .footer-right-bar, .footer-credits, .example-2 {
+    display: none;
+  }
+}

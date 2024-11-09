@@ -4,15 +4,36 @@
       <img src="icons/mario.svg" alt="Logo" class="header__logo-img">
     </a>
     <nav class="header__main">
-      <ul class="menu-ul">
+      <!-- Menú normal (solo en pantallas grandes) -->
+      <ul class="menu-ul" *ngIf="!isMenuOpen">
         <li class="header__link-wrapper"><a href="#about" class="header__link">01. SOBRE MI</a></li>
         <li class="header__link-wrapper"><a href="#projects" class="header__link">02. PROYECTOS</a></li>
         <li class="header__link-wrapper"><a href="#contact" class="header__link">03. CONTACTO</a></li>
         <li class="header__link-wrapper"><a href="#" class="cv-btn">DESCARGAR CV</a></li>
       </ul>
-      <div class="menu-wrapper">
+      
+      <!-- Menú hamburguesa (solo en pantallas pequeñas) -->
+      <div class="menu-wrapper" (click)="toggleMenu()">
         <div class="hamburger-menu"></div>
+      </div>
+
+      <!-- Menú responsive que aparece cuando el menú hamburguesa está activo -->
+      <div class="menu-responsive" [class.active]="isMenuOpen">
+        <nav>
+          <ol>
+            <li><a href="#about" class="header__link" (click)="closeMenu()">01. SOBRE MI</a></li>
+            <li><a href="#projects" class="header__link" (click)="closeMenu()">02. PROYECTOS</a></li>
+            <li><a href="#contact" class="header__link" (click)="closeMenu()">03. CONTACTO</a></li>
+            <li><a href="#" class="cv-btn" (click)="closeMenu()">DESCARGAR CV</a></li>
+          </ol>
+        </nav>
       </div>
     </nav>
   </div>
 </section>
+
+
+
+
+
+
