@@ -1,129 +1,196 @@
-#about {
-  color: #0D0D0D;
-  padding: 2em;
+/* src/app/components/about/about.component.css */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.about-container {
+  width: 100%;
+  max-width: 1200px; /* Max-width para mantener el contenido centrado */
   text-align: center;
+  margin: 0 auto; /* Centrado automático */
+  background-color: #F0F8FF;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif; /* Fuente general */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-#about h3 {
+.about-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-title {
+  color: black;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease 0.3s; /* Con retraso para la animación */
+}
+
+.about-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilos para el texto */
+.about-container p {
+  color: #333;
+  font-size: 1.1em;
+  margin: 15px 0;
+  line-height: 1.6;
+  font-family: 'Press Start 2P', cursive; /* Fuente estilo cómic para el texto */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease 0.5s;
+}
+
+.about-container p.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilos para las categorías de tecnologías */
+.tech-container {
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease 0.7s;
+}
+
+.tech-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tech-title {
+  font-size: 2em;
+  font-family: 'Archivo Black', sans-serif;
+  color: #4a90e2;
+  margin-bottom: 20px;
+  transition: opacity 1s ease, transform 1s ease 0.3s;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.tech-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tech-category {
+  margin-bottom: 30px;
+}
+
+.category-title {
+  font-size: 1.5em;
   color: #64ffda;
-  margin: 80px 0 50px 0;
-  font-size: 2rem; /* Tamaño más grande para "¡Hola, mi nombre es!" */
-  font-weight: normal;
-  font-family: "Roboto Mono", monospace; /* Reemplaza con la fuente correspondiente */
-  text-align: left;
-  position: relative;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease 0.3s;
 }
 
-#about h3::before {
-  content: '';
-  position: absolute;
-  left: -20px; /* Ajusta esta distancia según sea necesario */
-  top: 0;
-  bottom: 0;
-  width: 2px; /* Grosor de la línea */
-  background-color: #64ffda; /* Color de la línea */
+.category-title.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-#about p {
-  color: #d7def3;
-  text-align: left;
-  justify-content: center;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", "Monaco", monospace; /* Cambia la fuente a una de las fuentes proporcionadas */
-  font-size: 1.1rem; /* Tamaño de fuente más grande */
-  opacity: 0.8;
-  line-height: 1.5;
-}
-
-.about-content {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-top: 30px;
-}
-
-.about-description {
-  max-width: 480px;
-  align-self: flex-end; /* Baja el texto */
-}
-
-.about-tech-container {
-  margin-top: 30px;
-  align-self: flex-start; /* Sube la tarjeta */
-}
-
-/* Card styles */
-.card {
-  width: 290px;
-  height: 300px;
-  background: #0539a8; /* Color de fondo de la tarjeta */
-  padding: 10px;
+.tech-list {
   display: flex;
   flex-wrap: wrap;
-  color: #0D0D0D; /* Color del texto */
-  border-radius: 15px;
-  box-shadow: -20px 20px 0px -5px #64ffda; /* Sombra de la tarjeta */
-  margin-top: 25px;	
-  margin-left: 80%; /* Mueve la tarjeta a la izquierda */
+  justify-content: center;
 }
 
-.title {
-  font-weight: 900;
-  font-size: 1.7em;
-  color: #64ffda; /* Color del título */
-  transition: color 0.3s ease-in-out;
-}
-
-.title:hover {
-  color: #51572c; /* Color del título al pasar el ratón por encima */
-}
-
-.tag__name {
-  display: inline-block;
-  color: #000000;
-  font-size: 1.1em;
-  background-color: #64ffda; /* Color de fondo de las etiquetas */
-  padding: 6px 23px 9px;
-  border-radius: 70em;
-  margin: 8px 6px 8px 0;
-  margin-left: 0px;
-  position: relative;
-  text-transform: lowercase;
+.tech-item {
+  background-color: #64ffda;
+  color: black;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
   cursor: pointer;
-  transition: all .3s ease-in-out;
+  font-family: 'Press Start 2P', cursive; /* Fuente cómic */
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1s ease, transform 0.8s ease;
 }
 
-.tag__name::before, .tag__name::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 40%;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #0D0D0D; /* Color de los puntos */
+.tech-item.visible {
+  opacity: 1;
+  transform: scale(1);
 }
 
-.tag__name::before {
-  left: 7px;
-}
-
-.tag__name::after {
-  right: 7px;
-}
-
-.tag__name:hover {
+.tech-item:hover {
+  background-color: #4a90e2;
+  color: white;
   transform: scale(1.1);
-  background-color: #ddff01;
 }
 
-@media (max-width: 500px) {
-  .about-content {
-    flex-direction: column;
-    align-items: center;
+/* Media query para pantallas de 1024px o más */
+@media (min-width: 1024px) {
+  .about-container {
+    padding: 20px;
+    /* El margin-left y margin-right no son necesarios, ya que usamos 'margin: 0 auto' */
   }
 
-  .about-tech-container {
-    width: 100%;
-    margin-top: 20px;
+  .about-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+
+  .about-container p {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+
+  .tech-title {
+    font-size: 1.7em;
+  }
+
+  .category-title {
+    font-size: 1.3em;
+  }
+
+  .tech-item {
+    font-size: 1em;
+    padding: 8px 15px;
   }
 }
+
+/* Media query para pantallas de 768px o menos */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 1.5em;
+  }
+
+  .about-container {
+    padding: 10px;
+  }
+
+  .about-container p {
+    font-size: 1em;
+  }
+
+  .tech-title {
+    font-size: 1.5em;
+  }
+
+  .category-title {
+    font-size: 1.2em;
+  }
+
+  .tech-item {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+}
+
+
+

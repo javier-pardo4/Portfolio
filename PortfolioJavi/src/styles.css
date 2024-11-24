@@ -1,33 +1,21 @@
-/* styles.css */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #0a192f; /* Fondo global */
+/* src/styles.css */
+
+/* Definición de la paleta de colores */
+:root {
+  --azul-real: #4169E1;
+  --celeste-claro: #87CEEB;
+  --azul-marino: #003366;
+  --aqua: #00FFFF;
+  --gris-azulado: #B0C4DE;
+  --blanco-hielo: #F0F8FF;
+}
+
+/* Fondo general blanco */
+html, body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Evitar desplazamiento horizontal */
+  background-color: var(--blanco-hielo);
+  overflow-x: hidden;
 }
-
-* {
-  box-sizing: border-box; /* Asegura que el padding y el border no afecten al tamaño total de los elementos */
-}
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Asegura que el contenido ocupe al menos la altura de la ventana */
-  padding: 10px; /* Espaciado interno */
-  background-color: #0a192f;
-  color: #000000; /* Color de texto para el contenido central */
-  overflow-y: auto; /* Permite desplazamiento vertical en el contenido central */
-}
-
-.container {
-  max-width: 1800px; /* Ajusta el ancho máximo según tus necesidades */
-  margin: 0 45px; /* Centra el contenedor horizontalmente */
-  padding: 0px; /* Añade un poco de padding para que el contenido no toque los bordes */
-}
-
-app-footer {
-  margin-top: auto; /* Empuja el pie de página al final de la página */
-}
-
