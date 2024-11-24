@@ -12,6 +12,7 @@
   opacity: 0.8;
   background-size: cover;
   background-position: center;
+  animation: fadeIn 1.5s ease-out;
 }
 
 .hero::after {
@@ -24,13 +25,31 @@
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #F0F8FF 100%);
 }
 
+/* Animación de fadeIn para la hero */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .hero__content {
   max-width: 900px;
   position: relative; /* Asegura que el contenido esté por encima del pseudo-elemento */
+  animation: slideUp 1.5s ease-out; /* Animación para el contenido */
 }
 
-.hero__title {
-  font-size: 3rem;
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .hero__title {
@@ -39,6 +58,18 @@
   color: #F0F8FF;
   font-weight: bold;
   font-family: 'Archivo Black', sans-serif;
+  animation: fadeInText 2s ease-out; /* Animación para el título */
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero__subtitle {
@@ -47,15 +78,17 @@
   color: #00A82D; /* Verde de Evernote */
   font-weight: bold;
   font-family: 'Archivo Black', sans-serif;
-
+  animation: fadeInText 2s ease-out 0.3s; /* Animación con retraso para el subtítulo */
 }
 
 .hero__buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
+  animation: fadeInText 2s ease-out 0.6s; /* Animación para los botones */
 }
 
+/* Estilos para los botones */
 .hero__cta {
   display: inline-block;
   padding: 12px 25px;
@@ -65,12 +98,13 @@
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Añadido el efecto de escala */
 }
 
 .hero__cta:hover {
   background-color: #CADA2A; /* Verde claro */
   color: #000000; /* Negro */
+  transform: scale(1.05); /* Animación de escala al hacer hover */
 }
 
 .hero__cta--cv {
@@ -81,17 +115,19 @@
 .hero__cta--cv:hover {
   background-color: #00A82D; /* Verde de Evernote */
   color: #FFFFFF; /* Blanco */
+  transform: scale(1.05); /* Animación de escala al hacer hover */
 }
 
+/* Animación para el cursor */
 .cursor {
   border-right: 2px solid black;
   animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
- 0% { border-color: transparent; }
- 50% { border-color: black; }
- 100% { border-color: transparent; }
+  0% { border-color: transparent; }
+  50% { border-color: black; }
+  100% { border-color: transparent; }
 }
 
 /* Estilos responsivos */
@@ -120,4 +156,5 @@
       gap: 15px;
   }
 }
+
 
