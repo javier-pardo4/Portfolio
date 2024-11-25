@@ -37,6 +37,7 @@
   max-width: 900px;
   position: relative; /* Asegura que el contenido esté por encima del pseudo-elemento */
   animation: slideUp 1.5s ease-out; /* Animación para el contenido */
+  z-index: 1;
 }
 
 @keyframes slideUp {
