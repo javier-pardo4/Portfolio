@@ -1,135 +1,149 @@
-#projects {
-  color: #0D0D0D;
-  padding: 2em;
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+  background-color: #f4f4f4; /* Fondo claro */
 }
 
-#projects h3 {
-  color: #64ffda;
-  margin: 80px 0 50px 0;
-  font-size: 2rem; /* Tamaño más grande para "¡Hola, mi nombre es!" */
-  font-weight: normal;
-  font-family: "Roboto Mono", monospace; /* Reemplaza con la fuente correspondiente */
-  text-align: left;
-  position: relative;
-}
-
-#projects h3::before {
-  content: '';
-  position: absolute;
-  left: -20px; /* Ajusta esta distancia según sea necesario */
-  top: 0;
-  bottom: 0;
-  width: 2px; /* Grosor de la línea */
-  background-color: #64ffda; /* Color de la línea */
-}
-
-#projects p {
-  color: #d7def3;
-  text-align: left;
-  justify-content: center;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", "Monaco", monospace; /* Cambia la fuente a una de las fuentes proporcionadas */
-  font-size: 1.1rem; /* Tamaño de fuente más grande */
-  opacity: 0.8;
-  line-height: 1.5;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 80px;
-  margin-top: 30px;
-}
-
-/* From Uiverse.io by Amine-maker */
-.article-wrapper {
-  width: 250px;
-  transition: 0.15s all ease-in-out;
-  border-radius: 10px;
-  padding: 5px;
-  border: 4px solid transparent;
-  cursor: pointer;
-  background-color: white;
-}
-
-.article-wrapper:hover {
-  box-shadow: 10px 10px 0 #4e84ff, 20px 20px 0 #4444bd;
-  border-color: #0578c5;
-  transform: translate(-20px, -20px);
-}
-
-.article-wrapper:active {
-  box-shadow: none;
-  transform: translate(0, 0);
-}
-
-.types {
-  gap: 10px;
-  display: flex;
-  place-content: flex-start;
-}
-
-.rounded-lg {
-  border-radius: 10px;
-}
-
-.article-wrapper:hover .project-hover {
-  transform: rotate(-45deg);
-  background-color: #a6c2f0;
-}
-
-.project-info {
-  padding-top: 20px;
-  padding: 10px;
+/* Contenedor principal */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo razonable */
+  margin: 0 auto;
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.project-title {
-  font-size: 2em;
-  margin: 0;
-  font-weight: 600;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: black;
-}
-
-.flex-pr {
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.project-type {
-  background: #b2b2fd;
-  color: #1a41cd;
-  font-weight: bold;
-  padding: 0.3em 0.7em;
-  border-radius: 15px;
-  font-size: 12px;
-  letter-spacing: -0.6px;
-}
-
-.project-hover {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  padding: 9px;
-  transition: all 0.3s ease;
-}
-
-.container-project {
+/* Título de la sección */
+.projects-section .section-title {
+  font-size: 2.5rem;
+  font-family: 'Archivo Black', sans-serif;
+  color: #333; /* Título en color oscuro */
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-align: center;
   width: 100%;
-  height: 170px;
-  background: gray;
+  position: relative;
 }
 
-/* Responsiveness */
+
+
+/* Estilos para la grilla de los proyectos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
+  gap: 30px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Estilos para los artículos (proyectos) */
+.article-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  border-radius: 12px; /* Bordes suavizados */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  background-color: #333; /* Fondo oscuro elegante */
+  color: #fff; /* Texto blanco para contraste */
+  flex-direction: row;
+}
+
+.article-wrapper:hover {
+  transform: translateY(-5px); /* Efecto sutil al pasar el mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+}
+
+/* Color alterno para el segundo proyecto */
+.article-wrapper:nth-child(even) {
+  background-color: #FFEB3B; /* Amarillo suave */
+  color: #333; /* Texto oscuro en el amarillo */
+}
+
+/* Imagen del proyecto */
+.project-image {
+  width: 150px; /* Tamaño de la imagen */
+  height: 150px;
+  background-color: gray; /* Fondo gris (a reemplazar por una imagen real) */
+  border-radius: 10px;
+  margin-right: 20px; /* Separación de la imagen */
+}
+
+/* Información del proyecto */
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: #aaa; /* Descripción en color gris claro */
+  line-height: 1.5;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.technology {
+  background-color: rgba(255, 255, 255, 0.3); /* Fondo translúcido blanco */
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Responsividad */
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+
+  .article-wrapper {
+    flex-direction: column; /* Apilar elementos en pantallas pequeñas */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .project-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+  }
+
+  .project-title {
+    font-size: 1.3rem; /* Título más pequeño en móviles */
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .technology {
+    font-size: 0.9rem;
+    padding: 5px 10px;
   }
 }
+
+
+
+
+
+
