@@ -1,15 +1,19 @@
 /* Estilo general de la cabecera */
+* {
+  box-sizing: border-box; /* Asegura que padding y border no desborden el contenido */
+}
+
 .header {
   height: 70px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 97.5%;
+  width: 100%; /* Aseguramos que la cabecera ocupe el 100% del ancho */
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 10px; /* Reducimos un poco el padding para evitar que se desborde */
   background-color: #0f0e0e; /* Fondo negro */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
   transition: background-color 0.6s ease, box-shadow 0.3s ease;
@@ -135,11 +139,11 @@
   position: fixed;
   top: 70px;
   right: 0;
-  background-color: #000000; /* Fondo negro */
+  background-color: #0f0e0e; /* Fondo negro */
   z-index: 10;
-  width: 50%;
+  width: 50%; /* Menú ocupa solo el 50% del ancho */
   height: 100vh;
-  transform: translateX(100%);
+  transform: translateX(100%); /* Comienza fuera de la pantalla */
   transition: transform 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -151,7 +155,7 @@
 
 .menu-responsive.active {
   display: flex;
-  transform: translateX(0);
+  transform: translateX(0); /* Mueve el menú a la pantalla */
 }
 
 @keyframes slideInMenu {
@@ -246,6 +250,9 @@
       transform: translateX(0);
   }
 }
+
+
+
 
 
 

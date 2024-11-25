@@ -3,6 +3,7 @@ body {
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
   background-color: #f4f4f4; /* Fondo claro */
+  overflow-x: hidden; /* Esto evita el desbordamiento horizontal */
 }
 
 /* Contenedor principal */
@@ -15,6 +16,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 /* Título de la sección */
@@ -29,8 +31,6 @@ body {
   position: relative;
 }
 
-
-
 /* Estilos para la grilla de los proyectos */
 .projects-grid {
   display: grid;
@@ -38,6 +38,9 @@ body {
   gap: 30px;
   width: 100%;
   margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 
 /* Estilos para los artículos (proyectos) */
@@ -52,6 +55,7 @@ body {
   background-color: #333; /* Fondo oscuro elegante */
   color: #fff; /* Texto blanco para contraste */
   flex-direction: row;
+  box-sizing: border-box; /* Aseguramos que no haya desbordamientos */
 }
 
 .article-wrapper:hover {
@@ -72,6 +76,7 @@ body {
   background-color: gray; /* Fondo gris (a reemplazar por una imagen real) */
   border-radius: 10px;
   margin-right: 20px; /* Separación de la imagen */
+  box-sizing: border-box;
 }
 
 /* Información del proyecto */
@@ -111,9 +116,11 @@ body {
 }
 
 /* Responsividad */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .projects-grid {
     grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .article-wrapper {
@@ -141,6 +148,80 @@ body {
     padding: 5px 10px;
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 20px; /* Ajustar el padding para pantallas más pequeñas */
+  }
+
+  .projects-section .section-title {
+    font-size: 2rem; /* Ajustar el tamaño del título */
+  }
+
+  .projects-grid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .article-wrapper {
+    padding: 15px;
+  }
+
+  .project-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .technology {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  .projects-section .section-title {
+    font-size: 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-wrapper {
+    padding: 10px;
+  }
+
+  .project-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+  }
+
+  .technology {
+    font-size: 0.7rem;
+  }
+}
+
+
+
 
 
 

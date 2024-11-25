@@ -8,21 +8,16 @@ body {
 /* Contenedor principal */
 .about-container {
   display: flex;
-  flex-direction: column;  /* Organiza las secciones en columna */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 20px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.about-container.visible {
+  background-color: #f4f4f4;
   opacity: 1;
-  transform: translateY(0);
+  box-sizing: border-box;
 }
 
 /* Título "Sobre mí" */
@@ -36,62 +31,48 @@ body {
   width: 100%;
 }
 
-/* Contenedor de imagen y texto (alineado horizontalmente) */
+/* Contenedor de imagen y texto */
 .about-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Espacio entre la imagen y el texto */
-  margin-bottom: 50px; /* Separar esta sección de la de tecnologías */
-  flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
-  width: 98%;
+  gap: 20px;
+  flex-wrap: wrap; /* Asegura que los elementos se ajusten */
+  width: 100%;
   max-width: 1200px;
-  border: none; /* Eliminar borde negro de la imagen */
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* Imagen de perfil */
 .about-image {
   width: 300px;
   height: 300px;
-  border-radius: 15px; /* Borde redondeado */
+  border-radius: 15px;
   object-fit: cover;
-  flex-shrink: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Difuminar el borde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Texto de la sección "Sobre mí" */
 .about-text {
   padding: 20px;
-  width: 700px;
+  max-width: 700px;
   box-sizing: border-box;
-  background-color: #333; /* Fondo negro */
+  background-color: #333;
   color: #F0F8FF;
   border-radius: 15px;
 }
 
-/* Párrafos dentro del contenedor */
-.about-container p {
-  color: #F0F8FF;
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-/* Estilos generales para la sección de Tecnologías */
+/* Sección de Tecnologías */
 .tech-container {
-  width: 98%;
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto; /* Centrar el contenedor */
+  margin: 0 auto;
   background-color: #F0F8FF;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease 0.5s;
-}
-
-.tech-container.visible {
-  opacity: 1;
-  transform: translateY(0);
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .tech-title {
@@ -103,6 +84,7 @@ body {
   margin-bottom: 40px;
   letter-spacing: 1px;
 }
+
 
 .tech-category {
   margin-bottom: 40px; /* Espacio entre categorías */
@@ -150,6 +132,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 .tech-item:hover {
   background-color: #5aaf50;
   cursor: pointer;
@@ -164,44 +147,28 @@ body {
 
 /* Media query para pantallas menores de 1024px */
 @media (max-width: 1024px) {
-
-  /* Ajustar el contenedor principal */
-  .about-container {
-    padding: 40px 20px;
-  }
-
-  /* Ajustar el título */
   .about-title {
     font-size: 2.8em;
   }
 
-  /* Cambiar el diseño de la sección de imagen y texto */
   .about-content {
-    flex-direction: column;  /* Alinear imagen y texto en columna */
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-right: 20px; /* Ajustar margen derecho */
   }
 
-  /* Ajustar la imagen */
   .about-image {
     max-width: 350px;
     width: 100%;
     height: auto;
-    margin-bottom: 20px;  /* Añadir separación entre la imagen y el texto */
+    margin-bottom: 20px;
   }
 
-  /* Ajustar el tamaño del texto */
   .about-text {
     width: 90%;
     max-width: 700px;
-    padding: 20px;
-    background-color: #333; /* Fondo negro */
-    color: #F0F8FF;
-    border-radius: 15px;
   }
 
-  /* Ajustar los tamaños de letra de las tecnologías */
   .tech-title {
     font-size: 2.2em;
   }
@@ -219,7 +186,7 @@ body {
   }
 
   .about-content {
-    flex-direction: column;  /* Alinear imagen y texto en columna en pantallas pequeñas */
+    flex-direction: column;
     text-align: center;
     align-items: center;
   }
@@ -283,6 +250,9 @@ body {
     gap: 10px;
   }
 }
+
+
+
 
 
 
