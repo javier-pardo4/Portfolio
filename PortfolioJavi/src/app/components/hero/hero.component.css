@@ -1,4 +1,4 @@
-/* Estilos para la sección Hero */
+/* Elimina la propiedad background */
 .hero {
   position: relative;
   display: flex;
@@ -8,13 +8,11 @@
   color: #000000; /* Negro */
   text-align: center;
   padding: 0 20px;
-  background: url('/icons/fondo.jpeg'); /* Ruta a la imagen */
   opacity: 0.8;
   background-size: cover;
   background-position: center;
   animation: fadeIn 1.5s ease-out;
 }
-
 .hero::after {
   content: '';
   position: absolute;
