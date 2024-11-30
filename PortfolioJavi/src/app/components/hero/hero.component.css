@@ -1,158 +1,221 @@
-/* Elimina la propiedad background */
-.hero {
-  position: relative;
+/* Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+  font-family: 'Arial', sans-serif;
+  background-color: #F7F7F7; /* Fondo claro */
+  color: #333333; /* Texto oscuro */
+}
+
+/* Contenedor principal */
+.profile-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  color: #000000; /* Negro */
-  text-align: center;
-  padding: 0 20px;
-  opacity: 0.8;
-  background-size: cover;
-  background-position: center;
-  animation: fadeIn 1.5s ease-out;
+  flex-direction: column;
+  align-items: flex-start; /* Alineación a la izquierda */
+  margin: 0 auto;
+  padding: 20px;
+  width: 70%; /* Ocupa el 70% del ancho total */
 }
-.hero::after {
-  content: '';
+
+@media (max-width: 768px) {
+  .profile-container {
+    width: 90%;
+  }
+}
+
+
+/* Banner */
+.profile-banner {
+  width: 100%;
+  height: 200px;
+  background-color: #1DA1F2;
+  border-radius: 10px;
+  position: relative;
+  /* overflow: hidden;  Elimina esta propiedad */
+}
+
+.profile-avatar {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50%; /* Ajusta la altura del degradado */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #F0F8FF 100%);
-}
-
-/* Animación de fadeIn para la hero */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.hero__content {
-  max-width: 900px;
-  position: relative; /* Asegura que el contenido esté por encima del pseudo-elemento */
-  animation: slideUp 1.5s ease-out; /* Animación para el contenido */
+  top: 120px; /* Ajusta según sea necesario */
+  left: 20px;
+  width: 140px;
+  height: 140px;
+  border: 4px solid #FFFFFF;
+  border-radius: 50%;
+  object-fit: cover;
   z-index: 1;
 }
 
-@keyframes slideUp {
-  0% {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+
+/* Información del perfil */
+.profile-info {
+  margin-top: 100px; /* Ajustado por el avatar */
+  text-align: left; /* Alineación a la izquierda */
+  width: 100%;
 }
 
-.hero__title {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  color: #F0F8FF;
-  font-weight: bold;
-  font-family: 'Archivo Black', sans-serif;
-  animation: fadeInText 2s ease-out; /* Animación para el título */
-}
 
-@keyframes fadeInText {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero__subtitle {
+.profile-info h1 {
   font-size: 1.8rem;
-  margin-bottom: 2rem;
-  color: #00A82D; /* Verde de Evernote */
   font-weight: bold;
-  font-family: 'Archivo Black', sans-serif;
-  animation: fadeInText 2s ease-out 0.3s; /* Animación con retraso para el subtítulo */
 }
 
-.hero__buttons {
+.profile-info .username {
+  font-size: 1rem;
+  color: #555555; /* Texto gris medio */
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  font-size: 1rem;
+  color: #666666;
+}
+
+/* Descripción */
+.profile-description {
+  margin-top: 10px; /* Separación más pequeña */
+  text-align: left; /* Alineado a la izquierda */
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* Redes sociales */
+.social-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Alineación a la izquierda */
   gap: 20px;
-  animation: fadeInText 2s ease-out 0.6s; /* Animación para los botones */
+  margin-top: 30px; /* Separación más pequeña */
+  margin-bottom: 10px;
 }
 
-/* Estilos para los botones */
-.hero__cta {
-  display: inline-block;
-  padding: 12px 25px;
-  background-color: #00A82D; /* Verde de Evernote */
-  color: #FFFFFF; /* Blanco */
-  text-transform: uppercase;
+/* Estilos generales para los botones */
+button {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+  border: 1px solid transparent; /* El borde se personaliza con el color de la red */
+  color: inherit; /* Asegura que el color de texto herede el color del botón */
+  z-index: 1;
+}
+
+/* Espaciado entre el ícono y el texto */
+button span {
+  margin: 10px;
+}
+
+/* Efectos visuales del botón, usando un pseudo-elemento */
+button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+/* Estilos específicos para GitHub */
+.github-button {
+  border-color: rgb(36, 41, 46);
+  color: rgb(36, 41, 46);
+}
+
+.github-button:hover {
+  color: #fff;
+  border-color: rgb(36, 41, 46);
+}
+
+.github-button:hover::before {
+  box-shadow: inset 0 0 0 10em rgb(36, 41, 46);
+}
+
+/* Estilos específicos para LinkedIn */
+.linkedin-button {
+  border-color: rgb(0, 119, 181);
+  color: rgb(0, 119, 181);
+}
+
+.linkedin-button:hover {
+  color: #fff;
+  border-color: rgb(0, 119, 181);
+}
+
+.linkedin-button:hover::before {
+  box-shadow: inset 0 0 0 10em rgb(0, 119, 181);
+}
+
+
+
+/* Tabs de navegación */
+.profile-tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #CCCCCC;
+  margin-top: 10px; /* Separación más pequeña */
+  width: 100%;
+}
+
+.profile-tab {
+  padding: 10px 20px;
+  cursor: pointer;
   font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Añadido el efecto de escala */
+  text-transform: uppercase;
+  color: #555555;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
-.hero__cta:hover {
-  background-color: #CADA2A; /* Verde claro */
-  color: #000000; /* Negro */
-  transform: scale(1.05); /* Animación de escala al hacer hover */
+.profile-tab:hover,
+.profile-tab.active {
+  color: #333333; /* Texto más oscuro */
+  border-bottom: 2px solid #1DA1F2; /* Línea azul claro */
 }
 
-.hero__cta--cv {
-  background-color: #CADA2A; /* Verde claro */
-  color: #000000; /* Negro */
-}
-
-.hero__cta--cv:hover {
-  background-color: #00A82D; /* Verde de Evernote */
-  color: #FFFFFF; /* Blanco */
-  transform: scale(1.05); /* Animación de escala al hacer hover */
-}
-
-/* Animación para el cursor */
-.cursor {
-  border-right: 2px solid black;
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-  0% { border-color: transparent; }
-  50% { border-color: black; }
-  100% { border-color: transparent; }
-}
-
-/* Estilos responsivos */
+/* Diseño responsivo */
 @media (max-width: 768px) {
-  .hero__title {
-      font-size: 2.5rem;
+  .profile-info h1 {
+    font-size: 1.5rem;
   }
 
-  .hero__subtitle {
-      font-size: 1.25rem;
+  .profile-info .username {
+    font-size: 0.9rem;
   }
 
-}
-
-@media (max-width: 480px) {
-  .hero__title {
-      font-size: 2rem;
+  .profile-description {
+    font-size: 0.9rem;
   }
 
-  .hero__subtitle {
-      font-size: 1.125rem;
+  .profile-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .hero__buttons {
-      flex-direction: column;
-      gap: 15px;
+  .profile-tab {
+    padding: 8px 12px;
   }
 }
 
