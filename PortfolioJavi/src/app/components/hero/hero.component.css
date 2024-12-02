@@ -8,7 +8,7 @@
 :host {
   display: block;
   font-family: 'Arial', sans-serif;
-  background-color: #F7F7F7; /* Fondo claro */
+  background-color: #f5f8fa; /* Fondo claro */
   color: #333333; /* Texto oscuro */
 }
 
@@ -113,11 +113,12 @@ button {
   border: 1px solid transparent; /* El borde se personaliza con el color de la red */
   color: inherit; /* Asegura que el color de texto herede el color del botón */
   z-index: 1;
+  margin: 10px;
 }
 
 /* Espaciado entre el ícono y el texto */
 button span {
-  margin: 10px;
+  margin-left: 10px;
 }
 
 /* Efectos visuales del botón, usando un pseudo-elemento */
@@ -168,6 +169,22 @@ button::before {
 .linkedin-button:hover::before {
   box-shadow: inset 0 0 0 10em rgb(0, 119, 181);
 }
+
+/* Estilos específicos para el botón Descargar CV */
+.cv-button {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.cv-button:hover {
+  color: #fff;
+  border-color: #28a745;
+}
+
+.cv-button:hover::before {
+  box-shadow: inset 0 0 0 10em #28a745;
+}
+
 
 
 
