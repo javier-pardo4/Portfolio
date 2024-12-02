@@ -19,11 +19,5 @@ export class HeroComponent {
     this.selectedTab = tab;
   }
 
-  // Método para redirigir según el botón clickeado
-  redirectToLink(event: any) {
-    const link = event.target.getAttribute('data-link');
-    if (link) {
-      window.open(link, '_blank'); // Redirige al enlace en una nueva pestaña
-    }
-  }
+
 }
