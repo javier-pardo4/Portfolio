@@ -1,145 +1,143 @@
 /* Estilo principal para el contenedor de la sección About */
 .about-container {
-    padding: 20px;
-    background-color: #f5f8fa; /* Fondo típico de X */
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 20px auto;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilo de cada publicación */
-  .post {
-    background-color: #ffffff;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #1DA1F2; /* Borde lateral de color azul para destacar */
-    background-color: #F0F8FF; /* Fondo suave con un tono azul */
-  }
-  
-  /* Cabecera de la publicación (avatar y nombre) */
-  .post-header {
-    display: flex;
-    align-items: center;
-  }
-  
-  .post-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .post-info {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .post-name {
-    font-weight: bold;
-    color: #1DA1F2; /* Azul de X */
-  }
-  
-  .post-handle {
-    color: #657786; /* Gris para el @handle */
-    font-size: 0.9em;
-  }
-  
-  /* Contenido de la publicación */
-  .post-content {
-    margin-top: 10px;
-    color: #14171A; /* Color del texto */
-  }
-  
-  .education-timeline {
-    margin-top: 10px;
-    display: flex; /* Activar Flexbox */
-    gap: 15px; /* Espaciado horizontal entre los elementos */
-    flex-wrap: wrap; /* Permitir que los elementos bajen a una nueva línea si no caben */
-    justify-content: flex-start; /* Alinearlos al inicio (puedes cambiarlo según prefieras) */
-    padding: 0; /* Elimina el padding-left si ya no es necesario */
-  }
-  
-  
-  .education-entry {
-    display: inline-block; /* Permitir que se comporten como bloques en línea */
-    margin-bottom: 10px; /* Margen entre líneas (si se envuelven) */
-    padding: 10px 20px; /* Espaciado interno del recuadro */
-    color: #1DA1F2; /* Color del texto */
-    background-color: #ffffff; /* Fondo blanco */
-    border: 2px solid #1DA1F2; /* Borde azul */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
-    text-align: center; /* Centrar el texto */
-    cursor: pointer; /* Cambiar el cursor a mano */
-  }
-  
-  /* Animación al pasar el ratón */
-  .education-entry:hover {
-    transform: scale(1.1); /* Aumentar ligeramente el tamaño */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Aumentar la sombra */
-    background-color: #1DA1F2; /* Fondo azul */
-    color: #ffffff; /* Texto blanco */
-  }
-  
-  
-  .degree {
-    font-weight: bold;
-  }
-  
-  .institution, .dates {
-    font-size: 0.9em;
-    color: #657786;
-  }
-  
-  /* Pie de la publicación (fecha y estadísticas) */
-  .post-footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    font-size: 0.9em;
-    color: #657786;
-  }
-  
-  .post-stats {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .likes, .retweets, .shares, .views {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  .likes {
-    color: #e0245e; /* Color de los likes */
-  }
-  
-  .retweets {
-    color: #00BA7C; /* Color de los retweets */
-  }
-  
-  .shares {
-    color: #1DA1F2; /* Color de los shares */
-  }
-  
-  .views {
-    color: #AAB8C2; /* Color de las vistas */
-  }
-  
-  /* Fecha de la publicación */
-  .post-date {
-    font-size: 0.8em;
-  }
-  
-  /* Separador entre publicaciones */
-  .divider {
-    border-top: 1px solid #E1E8ED;
-    margin: 20px 0;
-    padding: 0;
-  }
-  
+  padding: 20px;
+  background-color: #f5f8fa; /* Fondo típico de X */
+  border-radius: 10px;
+  max-width: 900px; /* Mismo max-width que el contenedor de About */
+  margin: 20px auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de cada publicación */
+.post {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #1DA1F2; /* Borde lateral de color azul para destacar */
+  background-color: #F0F8FF; /* Fondo suave con un tono azul */
+}
+
+/* Cabecera de la publicación (avatar y nombre) */
+.post-header {
+  display: flex;
+  align-items: center;
+}
+
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-name {
+  font-weight: bold;
+  color: #1DA1F2; /* Azul de X */
+}
+
+.post-handle {
+  color: #657786; /* Gris para el @handle */
+  font-size: 0.9em;
+}
+
+/* Contenido de la publicación */
+.post-content {
+  margin-top: 10px;
+  color: #14171A; /* Color del texto */
+}
+
+/* Hilo de Twitter: formación académica */
+.education-timeline {
+  margin-top: 10px;
+  display: flex; /* Activar Flexbox */
+  gap: 15px; /* Espaciado horizontal entre los elementos */
+  flex-wrap: wrap; /* Permitir que los elementos bajen a una nueva línea si no caben */
+  justify-content: flex-start; /* Alinearlos al inicio (puedes cambiarlo según prefieras) */
+  padding: 0; /* Elimina el padding-left si ya no es necesario */
+}
+
+.education-entry {
+  display: inline-block; /* Permitir que se comporten como bloques en línea */
+  margin-bottom: 10px; /* Margen entre líneas (si se envuelven) */
+  padding: 10px 20px; /* Espaciado interno del recuadro */
+  color: #1DA1F2; /* Color del texto */
+  background-color: #ffffff; /* Fondo blanco */
+  border: 2px solid #1DA1F2; /* Borde azul */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+  text-align: center; /* Centrar el texto */
+  cursor: pointer; /* Cambiar el cursor a mano */
+}
+
+/* Animación al pasar el ratón */
+.education-entry:hover {
+  transform: scale(1.1); /* Aumentar ligeramente el tamaño */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Aumentar la sombra */
+  background-color: #1DA1F2; /* Fondo azul */
+  color: #ffffff; /* Texto blanco */
+}
+
+.degree {
+  font-weight: bold;
+}
+
+.institution, .dates {
+  font-size: 0.9em;
+  color: #657786;
+}
+
+/* Pie de la publicación (fecha y estadísticas) */
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #657786;
+}
+
+.post-stats {
+  display: flex;
+  gap: 15px;
+}
+
+.likes, .retweets, .shares, .views {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.likes {
+  color: #e0245e; /* Color de los likes */
+}
+
+.retweets {
+  color: #00BA7C; /* Color de los retweets */
+}
+
+.shares {
+  color: #1DA1F2; /* Color de los shares */
+}
+
+.views {
+  color: #AAB8C2; /* Color de las vistas */
+}
+
+/* Fecha de la publicación */
+.post-date {
+  font-size: 0.8em;
+}
+
+/* Separador entre publicaciones */
+.divider {
+  border-top: 1px solid #E1E8ED;
+  margin: 20px 0;
+  padding: 0;
+}

@@ -64,16 +64,32 @@
   color: #1DA1F2;
 }
 
+/* El degree va en negrita */
 .degree {
   font-weight: bold;
 }
 
+/* Las instituciones y las fechas tienen un tamaño de fuente más pequeño */
 .institution, .dates {
   font-size: 0.9em;
   color: #657786;
 }
 
+/* Contenedor de la institución y la fecha */
+.institution-dates {
+  display: block;
+  margin-left: 20px; /* Tabulación entre institución y fecha */
+  font-size: 0.9em;
+  color: #657786;
+}
 
+.institution-dates span {
+  display: inline-block;
+}
+
+.institution {
+  margin-right: 10px; /* Espacio entre institución y la fecha */
+}
 
 /* Pie de la publicación (fecha y estadísticas) */
 .post-footer {
