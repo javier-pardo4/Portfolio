@@ -70,14 +70,20 @@
   </div>
 
   <!-- Contenido dinámico según la pestaña seleccionada -->
-  <div *ngIf="selectedTab === 'aboutMe'">
-    <app-about></app-about> <!-- Aquí se inserta el componente de 'Sobre mí' -->
+  <!-- Contenedor de About Me -->
+  <div class="section-container" *ngIf="selectedTab === 'aboutMe'">
+    <app-about></app-about>
   </div>
-  <div *ngIf="selectedTab === 'technologies'">
-    <app-technologies></app-technologies> <!-- Aquí se inserta el componente de 'Tecnologías' -->
+
+  <!-- Contenedor de Tecnologías -->
+  <div class="section-container" *ngIf="selectedTab === 'technologies'">
+    <app-technologies></app-technologies>
   </div>
-  <div *ngIf="selectedTab === 'projects'">
-    <app-projects></app-projects> <!-- Aquí se inserta el componente de 'Proyectos' -->
+
+  <!-- Contenedor de Proyectos -->
+  <div class="section-container" *ngIf="selectedTab === 'projects'">
+    <app-projects></app-projects>
   </div>
+
 
 </section>

@@ -1,11 +1,4 @@
-/* Estilo principal para el contenedor de la sección de proyectos */
-.projects-container {
-  padding: 20px;
-  background-color: #f5f8fa; /* Fondo típico de X */
-  border-radius: 10px;
-  margin: 20px auto;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+
 
 /* Estilo de cada publicación (proyecto) */
 .post {
