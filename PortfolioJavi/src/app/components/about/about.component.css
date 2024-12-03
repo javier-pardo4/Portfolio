@@ -25,11 +25,15 @@
 }
 
 .post-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
+  width: 40px; /* Ancho fijo del avatar */
+  height: 40px; /* Alto fijo del avatar */
+  border-radius: 50%; /* Hace el contenedor circular */
+  margin-right: 10px; /* Espaciado entre el avatar y el contenido adyacente */
+  object-fit: cover; /* Asegura que la imagen llene el contenedor manteniendo la proporción */
+  object-position: center; /* Centra la imagen dentro del recuadro circular */
+  display: block; /* Elimina espacios no deseados alrededor de la imagen */
 }
+
 
 .post-info {
   display: flex;
