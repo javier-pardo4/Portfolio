@@ -1,4 +1,12 @@
+:host-context(.dark-mode) .post {
+  background-color: #15202B; /* Fondo oscuro similar a Twitter */
+  color: #E1E8ED; /* Texto claro */
+  border-left: 5px solid #1DA1F2; /* Mantén el borde azul */
+}
 
+:host-context(.dark-mode) .post:hover {
+  box-shadow: 0 4px 15px rgba(29, 161, 242, 0.2); /* Sombra azul clara */
+}
 
 /* Estilo de cada publicación */
 .post {
@@ -33,7 +41,6 @@
   display: block; /* Elimina espacios no deseados alrededor de la imagen */
 }
 
-
 .post-info {
   display: flex;
   flex-direction: column;
@@ -55,6 +62,10 @@
   color: #14171A; /* Color del texto */
 }
 
+:host-context(.dark-mode) .post-content {
+  color: #E1E8ED; /* Texto claro en modo oscuro */
+}
+
 /* Hilo de Twitter: formación académica */
 .education-timeline {
   margin-top: 10px;
@@ -66,15 +77,22 @@
   color: #1DA1F2;
 }
 
+:host-context(.dark-mode) .education-entry {
+  color: #1DA1F2; /* Azul de X en modo oscuro */
+}
+
 /* El degree va en negrita */
 .degree {
   font-weight: bold;
 }
 
-/* Las instituciones y las fechas tienen un tamaño de fuente más pequeño */
 .institution, .dates {
   font-size: 0.9em;
   color: #657786;
+}
+
+:host-context(.dark-mode) .institution, :host-context(.dark-mode) .dates {
+  color: #8899A6; /* Gris claro en modo oscuro */
 }
 
 /* Contenedor de la institución y la fecha */
@@ -83,6 +101,10 @@
   margin-left: 20px; /* Tabulación entre institución y fecha */
   font-size: 0.9em;
   color: #657786;
+}
+
+:host-context(.dark-mode) .institution-dates {
+  color: #8899A6; /* Gris claro en modo oscuro */
 }
 
 .institution-dates span {
@@ -100,6 +122,10 @@
   margin-top: 10px;
   font-size: 0.9em;
   color: #657786;
+}
+
+:host-context(.dark-mode) .post-footer {
+  color: #8899A6; /* Gris claro en modo oscuro */
 }
 
 .post-stats {
@@ -129,9 +155,17 @@
   color: #AAB8C2; /* Color de las vistas */
 }
 
+:host-context(.dark-mode) .views {
+  color: #657786; /* Gris en modo oscuro */
+}
+
 /* Fecha de la publicación */
 .post-date {
   font-size: 0.8em;
+}
+
+:host-context(.dark-mode) .post-date {
+  color: #8899A6; /* Gris claro en modo oscuro */
 }
 
 /* Separador entre publicaciones */
@@ -139,4 +173,20 @@
   border-top: 3px solid #8bc4ec;
   margin: 20px 0;
   padding: 0;
+}
+
+:host-context(.dark-mode) .divider {
+  border-top: 3px solid #1DA1F2; /* Azul de X en modo oscuro */
+}
+
+@media (min-width: 2560px) {
+  .post {
+    padding: 30px; /* Aumenta el padding */
+    margin-bottom: 40px; /* Aumenta el margen inferior */
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+  }
+
+  .post-header {
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente en la cabecera */
+  }
 }

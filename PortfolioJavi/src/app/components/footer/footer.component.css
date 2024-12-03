@@ -2,7 +2,7 @@
 .footer {
   background-color: #1da1f2;
   color: #fff;
-  padding: 40px 20px;
+  padding: 20px 10px; /* Reducir el padding */
   text-align: center;
 }
 
@@ -13,17 +13,17 @@
 }
 
 .footer-section {
-  margin: 15px;
+  margin: 10px 10px 5px 10px; /* Reducir el margin inferior */
   flex: 1;
 }
 
 .footer-section h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 1.8rem; /* Reducir el tamaño de la fuente */
+  margin-bottom: 8px; /* Reducir el margin */
 }
 
 .footer-section p, .footer-section ul {
-  font-size: 14px;
+  font-size: 12px; /* Reducir el tamaño de la fuente */
 }
 
 .footer-section ul {
@@ -32,12 +32,13 @@
 }
 
 .footer-section ul li {
-  margin: 5px 0;
+  margin: 3px 0; /* Reducir el margin */
 }
 
 .footer-section ul li a {
   color: #fff;
   text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .footer-section ul li a:hover {
@@ -48,19 +49,19 @@
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 8px; /* Reducir el gap */
 }
 
 .social-button {
   background: transparent;
   border: 1px solid #fff;
-  padding: 8px 18px;
+  padding: 6px 14px; /* Reducir el padding */
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   border-radius: 25px;
-  font-size: 16px;
+  font-size: 14px; /* Reducir el tamaño de la fuente */
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -71,11 +72,11 @@
 }
 
 .social-button svg {
-  margin-right: 10px;
+  margin-right: 8px; /* Reducir el margin */
 }
 
 .footer-bottom {
-  margin-top: 20px;
-  font-size: 12px;
+  margin-top: 10px; /* Reducir el margin */
+  font-size: 10px; /* Reducir el tamaño de la fuente */
   color: #fff;
 }

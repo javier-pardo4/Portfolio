@@ -138,3 +138,44 @@
   margin: 20px 0;
   padding: 0;
 }
+
+:host-context(.dark-mode) .post {
+  background-color: #15202B; /* Fondo oscuro similar a Twitter */
+  color: #E1E8ED; /* Texto claro */
+  border-left: 5px solid #1DA1F2; /* Mantén el borde azul */
+}
+
+:host-context(.dark-mode) .post:hover {
+  box-shadow: 0 4px 15px rgba(29, 161, 242, 0.2); /* Sombra azul clara */
+}
+
+:host-context(.dark-mode) .post-content {
+  color: #E1E8ED; /* Texto claro en modo oscuro */
+}
+
+:host-context(.dark-mode) .education-entry {
+  color: #1DA1F2; /* Azul de X en modo oscuro */
+  background-color: #15202B; /* Fondo oscuro */
+  border: 2px solid #1DA1F2; /* Borde azul */
+}
+
+:host-context(.dark-mode) .education-entry:hover {
+  background-color: #1DA1F2; /* Fondo azul */
+  color: #ffffff; /* Texto blanco */
+}
+
+:host-context(.dark-mode) .post-footer {
+  color: #8899A6; /* Gris claro en modo oscuro */
+}
+
+:host-context(.dark-mode) .views {
+  color: #657786; /* Gris en modo oscuro */
+}
+
+:host-context(.dark-mode) .post-date {
+  color: #8899A6; /* Gris claro en modo oscuro */
+}
+
+:host-context(.dark-mode) .divider {
+  border-top: 3px solid #1DA1F2; /* Azul de X en modo oscuro */
+}
