@@ -5,9 +5,15 @@
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  border-left: 5px solid #1DA1F2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  border-left: 5px solid #1DA1F2; /* Borde lateral de color azul para destacar */
   background-color: #F0F8FF; /* Fondo suave con un tono azul */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.post:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
 /* Cabecera de la publicación (avatar y nombre) */
@@ -128,7 +134,7 @@
 
 /* Separador entre publicaciones */
 .divider {
-  border-top: 1px solid #E1E8ED;
+  border-top: 3px solid #8bc4ec;
   margin: 20px 0;
   padding: 0;
 }
