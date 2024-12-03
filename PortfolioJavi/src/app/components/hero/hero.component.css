@@ -185,7 +185,14 @@ button::before {
   box-shadow: inset 0 0 0 10em #28a745;
 }
 
+/* Eliminar el subrayado del enlace */
+.cv-button-link {
+  text-decoration: none; /* Quitar el subrayado */
+}
 
+.social-button-link {
+  text-decoration: none; /* Quitar el subrayado */
+}
 
 
 /* Tabs de navegación */
@@ -204,6 +211,9 @@ button::before {
   text-transform: uppercase;
   color: #555555;
   transition: color 0.3s, border-bottom 0.3s;
+  margin: 0; /* Eliminar el espacio entre tabs */
+  flex: 1; /* Hacer que cada tab ocupe el mismo espacio */
+  text-align: center; /* Centrar el texto en cada tab */
 }
 
 .profile-tab:hover,
@@ -227,13 +237,22 @@ button::before {
   }
 
   .profile-tabs {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap; /* Mantener los tabs en una sola línea */
+    justify-content: space-between; /* Asegurar que los tabs se distribuyan uniformemente */
   }
 
   .profile-tab {
     padding: 8px 12px;
+    font-size: 0.8rem; /* Reducir el tamaño del texto en tabs para móviles */
+  }
+
+  .social-links {
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: center; /* Centra los elementos horizontalmente */
+  }
+
+  button {
+    flex: 0 1 auto; /* Permite que los botones se ajusten y envuelvan */
+    margin: 10px; /* Ajusta el margen para separar los botones */
   }
 }
-
-
