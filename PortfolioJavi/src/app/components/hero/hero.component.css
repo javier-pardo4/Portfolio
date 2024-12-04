@@ -418,3 +418,18 @@ button::before {
   }
 }
 
+
+.in-progress {
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.in-progress .text {
+  margin-bottom: 10px;
+}
+
+.in-progress i {
+  font-size: 38px;
+}
