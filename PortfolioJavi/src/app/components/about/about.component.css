@@ -32,8 +32,8 @@
 }
 
 .post-avatar {
-  width: 40px; /* Ancho fijo del avatar */
-  height: 40px; /* Alto fijo del avatar */
+  width: 50px; /* Ancho fijo del avatar */
+  height: 50px; /* Alto fijo del avatar */
   border-radius: 50%; /* Hace el contenedor circular */
   margin-right: 10px; /* Espaciado entre el avatar y el contenido adyacente */
   object-fit: cover; /* Asegura que la imagen llene el contenedor manteniendo la proporción */
@@ -49,17 +49,21 @@
 .post-name {
   font-weight: bold;
   color: #1DA1F2; /* Azul de X */
+  font-size: 1.1rem;
 }
 
 .post-handle {
   color: #657786; /* Gris para el @handle */
-  font-size: 0.9em;
+  font-size: 1rem;
 }
 
 /* Contenido de la publicación */
 .post-content {
   margin-top: 10px;
   color: #14171A; /* Color del texto */
+  font-size: 1.1rem;
+  line-height: 1.5; /* Espaciado entre líneas */
+  font-weight: 400;
 }
 
 :host-context(.dark-mode) .post-content {

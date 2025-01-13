@@ -14,6 +14,7 @@
 
 /* Contenedor principal */
 .profile-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Alineación a la izquierda */
@@ -144,24 +145,34 @@
 
 /* Banner */
 .profile-banner {
-  width: 100%;
-  height: 200px;
-  background-color: #1DA1F2;
-  border-radius: 10px;
+  width: 100%; /* El ancho del banner será siempre del 100% del contenedor */
+  height: auto; /* La altura dependerá del aspecto de la imagen */
   position: relative;
-  /* overflow: hidden;  Elimina esta propiedad */
+  background-color: #1DA1F2; /* Color de fondo como fallback */
+  border-radius: 10px;
 }
 
+/* Imagen del banner */
+.responsive-banner {
+  display: block; /* La imagen ocupa todo el ancho del contenedor */
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Evita distorsiones */
+  border-radius: 10px;
+}
+
+/* Avatar */
 .profile-avatar {
   position: absolute;
-  top: 120px; /* Ajusta según sea necesario */
-  left: 20px;
-  width: 140px;
-  height: 140px;
-  border: 4px solid #FFFFFF;
-  border-radius: 50%;
-  object-fit: cover;
-  z-index: 1;
+  bottom: -25%; /* Ajusta la posición relativa al tamaño del banner */
+  left: 5%; /* Mantiene una posición dinámica respecto al banner */
+  width: 15%; /* Escala dinámica basada en el ancho del banner */
+  max-width: 200px; /* Límite máximo para evitar que sea demasiado grande */
+  aspect-ratio: 1 / 1; /* Asegura proporciones perfectas para un círculo */
+  border: 4px solid #FFFFFF; /* Borde blanco alrededor */
+  border-radius: 50%; /* Hace el avatar circular */
+  object-fit: cover; /* Evita distorsiones en la imagen del avatar */
+  z-index: 1; /* Asegura que esté por encima del banner */
 }
 
 
@@ -193,7 +204,7 @@
 
 /* Descripción */
 .profile-description {
-  margin-top: 15px; /* Separación más pequeña */
+  margin-top: 5px; /* Separación más pequeña */
   text-align: left; /* Alineado a la izquierda */
   font-size: 1rem;
   color: #3b3b3b;
@@ -206,7 +217,7 @@
   display: flex;
   justify-content: center; /* Alineación a la izquierda */
   gap: 20px;
-  margin-top: 30px; /* Separación más pequeña */
+  margin-top: 10px; /* Separación más pequeña */
   margin-bottom: 10px;
   width: 100%;
 }
@@ -413,8 +424,39 @@ button::before {
     width: 100%; /* Ocupar todo el ancho disponible */
   }
 
-  .profile-info .username{
-    margin-top: 20px;
+  .profile-info .username {
+    margin-top: -10px;
+  }
+
+  .btn-container {
+    display: none;
+  }
+
+  .social-button {
+    padding: 5px; /* Reducir el padding de los botones */
+    font-size: 0; /* Ocultar el texto */
+    width: 40px; /* Ancho fijo para los botones */
+    height: 40px; /* Alto fijo para los botones */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-button svg {
+    width: 30px; /* Ajustar el tamaño del icono */
+    height: 30px; /* Ajustar el tamaño del icono */
+  }
+
+  .cv-button {
+    padding: 5px 10px; /* Mantener el padding del botón de CV */
+    font-size: 12px; /* Mantener el tamaño de la fuente del botón de CV */
+    width: auto; /* Ancho automático para el botón de CV */
+    height: auto; /* Alto automático para el botón de CV */
+  }
+
+  button {
+    padding: 5px 10px; /* Reducir el padding de los botones */
+    font-size: 12px; /* Reducir el tamaño de la fuente de los botones */
   }
 }
 
@@ -433,3 +475,4 @@ button::before {
 .in-progress i {
   font-size: 38px;
 }
+
