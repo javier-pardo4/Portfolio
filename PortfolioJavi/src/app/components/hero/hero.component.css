@@ -378,10 +378,21 @@ button::before {
   width: 100%;
 }
 
+@media (max-width: 1024px) {
+  .profile-info{
+    margin-top: 50px;
+  }
+  
+}
+
+
 /* Diseño responsivo */
 @media (max-width: 768px) {
+  .profile-info{
+    margin-top: 50px;
+  }
   .profile-info h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .profile-info .username {
@@ -419,6 +430,23 @@ button::before {
     align-items: flex-start;
   }
 
+  .profile-avatar{
+    width: 18%;
+    bottom: -35%;
+  }
+
+  .profile-info{
+    margin-top: 25px;
+  }
+
+  .profile-info h1{
+    font-size: 1.1rem;
+  }
+
+  .profile-description{
+    font-size: 0.8rem;
+  }
+
   .dark-mode-toggle {
     margin-top: 10px; /* Espacio entre el h1 y el botón */
     width: 100%; /* Ocupar todo el ancho disponible */
@@ -433,30 +461,22 @@ button::before {
   }
 
   .social-button {
-    padding: 5px; /* Reducir el padding de los botones */
-    font-size: 0; /* Ocultar el texto */
-    width: 40px; /* Ancho fijo para los botones */
-    height: 40px; /* Alto fijo para los botones */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .social-button svg {
-    width: 30px; /* Ajustar el tamaño del icono */
-    height: 30px; /* Ajustar el tamaño del icono */
-  }
-
-  .cv-button {
-    padding: 5px 10px; /* Mantener el padding del botón de CV */
-    font-size: 12px; /* Mantener el tamaño de la fuente del botón de CV */
-    width: auto; /* Ancho automático para el botón de CV */
-    height: auto; /* Alto automático para el botón de CV */
+    font-size: 12px; /* Ocultar el texto */
   }
 
   button {
-    padding: 5px 10px; /* Reducir el padding de los botones */
+    padding: 3px 10px; /* Reducir el padding de los botones */
     font-size: 12px; /* Reducir el tamaño de la fuente de los botones */
+    gap: 0px; /* Espacio entre el ícono y el texto */
+  }
+
+  /* Reducir el margen entre los botones */
+  .social-links {
+    gap: 10px; /* Reducir el espacio entre los botones */
+  }
+
+  .social-links button {
+    margin: 0 5px; /* Reducir el margen individual entre los botones */
   }
 }
 
